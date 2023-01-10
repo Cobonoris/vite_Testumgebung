@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import ProductList from './components/ProductList.vue';
+
+var animals = [
+  {title: "Hund", legs: 2 },
+  {title: "Mensch", legs: 4 },
+  {title: "Wal", legs: 0 }
+]
+
 </script>
 
 <template>
@@ -11,7 +19,8 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Product List" />
+  <ProductList v-bind:products="animals"/>
 </template>
 
 <style scoped>
