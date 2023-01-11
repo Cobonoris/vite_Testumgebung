@@ -5,21 +5,26 @@ import ProductList from './components/ProductList.vue';
 var animals = [
   {title: "Hund", legs: 2 },
   {title: "Mensch", legs: 4 },
-  {title: "Wal", legs: 0 }
+  {title: "Wal", legs: 0 },
+  {title: "Jaguar", legs: 4 },
+  {title: "Spinne", legs: 8 },
+  {title: "Fliege", legs: 6 },
+  {title: "Regenwurm", legs: 0 },
+  {title: "Taube", legs: 2 }
 ]
 
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-  </div>
-  <HelloWorld msg="Product List" />
+  </div> -->
+  <!-- <HelloWorld msg="Product List" /> -->
   <ProductList v-bind:products="animals"/>
 </template>
 

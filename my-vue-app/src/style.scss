@@ -21,14 +21,38 @@
 //
 ///////////////////////////////////////////
 
+.bold {
+  font-weight: bold;
+}
+
+.content {
+        color: white;
+}
+
 .productList {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  
 
   &__item {
-    margin: auto;
+    display: flex;
+    width: 200px;
+    height: 100px;
+    margin: 10px auto;
+    background-color: darkslategray;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &-title {
-      color: red;
+      color: lightcoral;
+    }
+
+    &-legs {
+      color: lightblue;
     }
   }
 }
