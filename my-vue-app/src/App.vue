@@ -3,8 +3,6 @@ import HelloWorld from './components/HelloWorld.vue';
 import ProductList from './components/ProductList.vue';
 import * as list from './quellen/products.json';
 
-console.log(list);
-
 </script>
 
 <template>
