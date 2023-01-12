@@ -1,17 +1,9 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
 import ProductList from './components/ProductList.vue';
+import * as list from './quellen/products.json';
 
-var animals = [
-  {title: "Hund", legs: 2 },
-  {title: "Mensch", legs: 4 },
-  {title: "Wal", legs: 0 },
-  {title: "Jaguar", legs: 4 },
-  {title: "Spinne", legs: 8 },
-  {title: "Fliege", legs: 6 },
-  {title: "Regenwurm", legs: 0 },
-  {title: "Taube", legs: 2 }
-]
+console.log(list);
 
 </script>
 
@@ -25,7 +17,7 @@ var animals = [
     </a>
   </div> -->
   <!-- <HelloWorld msg="Product List" /> -->
-  <ProductList v-bind:products="animals"/>
+  <ProductList v-bind:products="list"/>
 </template>
 
 <style scoped>
