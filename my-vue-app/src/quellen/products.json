@@ -1,40 +1,57 @@
 {
-    "products": {
-        "001": {
+    "products": [
+        {
+            "code": "001",
             "title": "Zementsack",
-            "preisEUR": "19,50",
+            "price": "19,50€",
             "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
-            "availability": 5
+            "availability": "in_stock",
+            "ribbon": "Angebot"
         },
-        "002": {
+        {
+            "code": "002",
             "title": "Warnweste",
-            "preisEUR": "8,99",
+            "price": "8,99€",
             "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.obi.at%2Fproduct%2FDE%2F1500x1500%2F439517_1.jpg&f=1&nofb=1&ipt=ea51a19e3ec359a954e91b8560ddf14e15ac57e3beae802555ea0303b1231f0b&ipo=images",
-            "availability": 20
+            "availability": "in_stock",
+            "ribbon": "Versandkostenfrei"
         },
-        "003": {
+        {
+            "code": "003",
             "title": "Griffstange aus Eisen",
-            "preisEUR": "8,99",
+            "price": "8,99€",
             "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A2542940.jpg",
-            "availability": 1
+            "availability": "out_of_stock",
+            "variants": 3
         },
-        "004": {
+        {
+            "code": "004",
             "title": "PCI Silcofug® E Elastischer Dichtstoff für innen und aussen",
-            "preisEUR": "8,99",
+            "price": "8,99€",
             "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A1063887.jpg",
-            "availability": 2
+            "availability": "low_stock"
         },
-        "005": {
+        {
+            "code": "005",
             "title": "Portalgun",
-            "preisEUR": "8,99",
+            "oldPrice": "16,99€",
+            "price": "8,99€",
             "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
-            "availability": 15
+            "availability": "low_stock"
         },
-        "006": {
+        {
+            "code": "006",
             "title": "Pittiplatsch-Figur",
-            "preisEUR": "8,99",
+            "price": "8,99€",
             "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
-            "availability": 7
+            "availability": "in_stock"
+        },
+        {
+            "code": "007",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "low_stock"
         }
-    }
+    ]
 }
