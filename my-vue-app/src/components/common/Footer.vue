@@ -5,7 +5,7 @@ const test = "test"
 
 <template>
     <div class="footer">
-        Testy McTestface
+        <a href="https://r.mtdv.me/articles/heheWO">Testy McTestface</a>
     </div>
 </template>
 
@@ -22,6 +22,12 @@ const test = "test"
     color: var(--color-bg);
     z-index: 5;
 
+    a {
+        text-decoration: none;
+    }
+    a:visited {
+        color: var(--color-bg);
+    }
 }
 
 </style>
