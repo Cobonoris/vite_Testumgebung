@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import ProductTile from './ProductTile.vue'
 import { Product } from "../index"
+import ProductTile from './ProductTile/ProductTile.vue'
+
 
 defineProps<{ list: Product[] }>()
 

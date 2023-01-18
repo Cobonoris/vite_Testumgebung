@@ -1,0 +1,97 @@
+<script setup lang="ts">
+import {Product} from "../../index"
+
+defineProps<{ item: Product }>()
+
+</script>
+
+<template>
+    <div class="item__wrapper-top">
+        <div class="item__wrapper-top-ribbon" v-if="item.ribbon != undefined">
+            <span>
+                {{ item.ribbon }}
+            </span>
+        </div>
+        <div class="item__wrapper-top-img">
+            <img :src="item.imageURL" alt="kein Bild verfügbar"/>
+        </div>
+        <div class="item__wrapper-top-divider"></div>
+        <div class="item__wrapper-top-title">
+            {{ item.title }}
+        </div>
+    </div>
+</template>
+
+<style lang="scss">
+
+.item__wrapper-top-ribbon {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+}
+
+.item__wrapper-top-ribbon::after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    border: 5px solid #707070;
+    right: -10px;
+    top: 170px;
+    z-index: -1;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+.item__wrapper-top-ribbon span {
+    position: absolute;
+    padding: 3px 5px 3px 5px;
+    right: -5px;
+    top: 160px;
+    background-color: var(--color-green);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 1px 1px 5px -2px black;
+    border-radius: 0 3px 0 0;
+    z-index: 2;
+}
+
+
+
+.item__wrapper-top-img {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-in;
+
+    img {
+        max-width: 80%;
+        max-height: 80%;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    img:hover {
+        transform: scale(1.2);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.item__wrapper-top-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #bbb;
+}
+
+.item__wrapper-top-title {
+    margin: 10px;
+    font-weight: bold;
+    color: var(--color-font);
+}
+
+</style>
