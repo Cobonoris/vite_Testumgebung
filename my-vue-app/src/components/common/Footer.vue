@@ -17,7 +17,7 @@ const test = "test"
     padding: 10px 10px 0px 10px;
     bottom: 0;
     /* Height of the footer*/
-    height: 40px;
+    height: 30px;
     background: grey;
     color: var(--color-bg);
     z-index: 5;

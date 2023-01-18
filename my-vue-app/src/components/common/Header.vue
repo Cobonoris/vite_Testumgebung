@@ -9,7 +9,7 @@ const test = "test"
             Vue Testumgebung
         </span>
         <span class="sign">
-            by fcz
+            by <a target="_blank" href="https://www.xing.com/profile/Fabien_Czimmernings/cv">fcz</a>
         </span>
     </div>
     <div class="mg"></div>
@@ -35,7 +35,20 @@ const test = "test"
 
 .sign {
     font-style: italic;
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: var(--color-bg);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
+
 
 .mg {
   height: 50px;

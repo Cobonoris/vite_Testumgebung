@@ -18,6 +18,8 @@ import * as listJSON from './quellen/products.json';
 
 <style scoped>
 
-
+h1 {
+  margin-left: 10px;
+}
 
 </style>
