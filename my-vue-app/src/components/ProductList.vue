@@ -8,7 +8,6 @@ defineProps<{ list: Product[] }>()
 </script>
 
 <template>
-  <h1>List</h1>
   <div class="productList">
     <ProductTile :products="list" />
   </div>
@@ -23,7 +22,6 @@ defineProps<{ list: Product[] }>()
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-  
 }
 
 </style>
