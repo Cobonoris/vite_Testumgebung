@@ -7,27 +7,27 @@ defineProps<{ item: Product }>()
 </script>
 
 <template>
-   <div class="item__wrapper-bottom">
-        <div class="item__wrapper-bottom-variants" v-if="item.variants != undefined">
+   <div class="item-bottom">
+        <div class="item-bottom-variants" v-if="item.variants != undefined">
             {{ item.variants }} Varianten verfügbar
         </div>
-        <div class="item__wrapper-bottom-price">
-            <span class="item__wrapper-bottom-price-slashed" v-if="item.oldPrice != undefined">
+        <div class="item-bottom-price">
+            <span class="item-bottom-price-slashed" v-if="item.oldPrice != undefined">
                 {{ item.oldPrice }}
             </span>
             <span>
                 {{ item.price }} / Stück
             </span>
         </div>
-        <div class="item__wrapper-bottom-availability" v-if="item.availability == 'in_stock'">
+        <div class="item-bottom-availability" v-if="item.availability == 'in_stock'">
             verfügbar
             <div class="stockbar instock"></div>
         </div>
-        <div class="item__wrapper-bottom-availability" v-if="item.availability == 'low_stock'">
+        <div class="item-bottom-availability" v-if="item.availability == 'low_stock'">
             wenige verfügbar
             <div class="stockbar lowstock"></div>
         </div>
-        <div class="item__wrapper-bottom-availability" v-if="item.availability == 'out_of_stock'">
+        <div class="item-bottom-availability" v-if="item.availability == 'out_of_stock'">
             nicht verfügbar
             <div class="stockbar outofstock"></div>
         </div>
@@ -37,7 +37,7 @@ defineProps<{ item: Product }>()
 
 <style lang="scss">
 
-.item__wrapper-bottom-variants {
+.item-bottom-variants {
     margin: 10px;
     padding: 10px;
     font-size: 15px;
@@ -58,7 +58,7 @@ defineProps<{ item: Product }>()
     }
 }
 
-.item__wrapper-bottom-price {
+.item-bottom-price {
     margin: 10px;
     color: var(--color-font);
     font-weight: bold;
@@ -83,7 +83,7 @@ defineProps<{ item: Product }>()
     }
 }
 
-.item__wrapper-bottom-availability {
+.item-bottom-availability {
     width: 100%;
 	height: 40px;
     color: var(--color-font);

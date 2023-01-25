@@ -11,7 +11,10 @@ import * as listJSON from './quellen/products.json';
 <template>
   <Header/>
   <h1>Produktliste</h1>
-  <ProductList :list="listJSON.products"/>
+  <div class="list-wrap">
+    <ProductList :list="listJSON.products"/>
+  </div>
+  
   <Footer/>
 </template>
 
@@ -19,6 +22,12 @@ import * as listJSON from './quellen/products.json';
 
 h1 {
   margin-left: 10px;
+}
+
+.list-wrap {
+  display:  flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 </style>

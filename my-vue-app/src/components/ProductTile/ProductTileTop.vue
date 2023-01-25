@@ -6,18 +6,18 @@ defineProps<{ item: Product }>()
 </script>
 
 <template>
-    <div class="item__wrapper-top">
-        <div class="item__wrapper-top-ribbon" v-if="item.ribbon != undefined">
+    <div class="item-top">
+        <div class="item-top-ribbon" v-if="item.ribbon != undefined">
             <span>
                 {{ item.ribbon }}
             </span>
 
         </div>
-        <div class="item__wrapper-top-img">
+        <div class="item-top-img">
             <img :src="item.imageURL" alt="kein Bild verfügbar"/>
         </div>
-        <div class="item__wrapper-top-divider"></div>
-        <div class="item__wrapper-top-title">
+        <div class="item-top-divider"></div>
+        <div class="item-top-title">
             {{ item.title }}
         </div>
     </div>
@@ -25,13 +25,13 @@ defineProps<{ item: Product }>()
 
 <style lang="scss">
 
-.item__wrapper-top-ribbon {
+.item-top-ribbon {
     width: 100%;
     height: 10px;
     position: absolute;
 }
 
-.item__wrapper-top-ribbon::after {
+.item-top-ribbon::after {
     position: absolute;
     content: '';
     height: 5px;
@@ -44,7 +44,7 @@ defineProps<{ item: Product }>()
     border-top-color: transparent;
 }
 
-.item__wrapper-top-ribbon span {
+.item-top-ribbon span {
     position: absolute;
     padding: 3px 5px 3px 5px;
     right: -5px;
@@ -62,7 +62,7 @@ defineProps<{ item: Product }>()
 
 
 
-.item__wrapper-top-img {
+.item-top-img {
     width: 100%;
     height: 200px;
     display: flex;
@@ -74,6 +74,7 @@ defineProps<{ item: Product }>()
         max-width: 80%;
         max-height: 80%;
         transform: scale(1);
+        border-radius: 5px;
         transition: all 0.5s ease-in-out;
     }
     
@@ -83,13 +84,13 @@ defineProps<{ item: Product }>()
     }
 }
 
-.item__wrapper-top-divider {
+.item-top-divider {
     width: 100%;
     height: 1px;
     background-color: #bbb;
 }
 
-.item__wrapper-top-title {
+.item-top-title {
     margin: 10px;
     font-weight: bold;
     color: var(--color-font);

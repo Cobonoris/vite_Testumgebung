@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { Product } from "../../index"
 
-defineProps<{ list: Product[] }>()
+defineProps<{ 
+	list: Product[] 
+	Pages: Product[][]
+	currentPage: number
+}>()
 
 </script>
 
@@ -11,13 +15,9 @@ defineProps<{ list: Product[] }>()
             <a class="pagination__list-arrow left" href="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
             </a>
-            <li><a href="_blank">1</a></li>
-            <li class="inactive">...</li>
-            <li><a href="_blank">3</a></li>
-            <li class="active">4</li>
-            <li><a href="_blank">5</a></li>
-            <li class="inactive">...</li>
-            <li><a href="_blank">10</a></li>
+            <li v-for="(item, index) in Pages" :key="item.length">
+				<a>{{ index + 1}}</a>
+			</li>
             <a class="pagination__list-arrow right" href="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
             </a>

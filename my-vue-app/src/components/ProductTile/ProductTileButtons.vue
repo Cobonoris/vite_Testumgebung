@@ -6,7 +6,7 @@ defineProps<{ item: Product }>()
 </script>
 
 <template>
-    <div class="item__wrapper-bottom-buttons">
+    <div class="item-bottom-buttons">
         <button type="button" class="save">
         </button>
         <button type="button" class="buy">
@@ -17,7 +17,7 @@ defineProps<{ item: Product }>()
 
 <style lang="scss">
 
-.item__wrapper-bottom-buttons {
+.item-bottom-buttons {
     position: relative;
     width: 100%;
     height: 40px;

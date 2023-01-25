@@ -8,6 +8,12 @@
 	line-height: 1.15;
 }
 
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  }
+
 body {
 	background-color: #dfdfdf;
 	margin: 0;
