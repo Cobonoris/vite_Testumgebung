@@ -11,7 +11,6 @@ import * as listJSON from './quellen/products.json';
 <template>
   <Header/>
   <h1>Produktliste</h1>
-  <Pagination :list="listJSON.products"/>
   <ProductList :list="listJSON.products"/>
   <Footer/>
 </template>

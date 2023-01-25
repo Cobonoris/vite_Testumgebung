@@ -11,6 +11,7 @@ defineProps<{ item: Product }>()
             <span>
                 {{ item.ribbon }}
             </span>
+
         </div>
         <div class="item__wrapper-top-img">
             <img :src="item.imageURL" alt="kein Bild verfügbar"/>

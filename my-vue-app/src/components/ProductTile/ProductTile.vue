@@ -18,7 +18,7 @@ defineProps<{ products: Product[] }>()
 
 <style lang="scss">
 
-.productList .item {
+.item {
     display: flex;
 	position: relative;
 
