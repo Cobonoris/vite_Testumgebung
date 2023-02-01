@@ -1,8 +1,18 @@
-<script setup lang="ts">
+<script setup lang="ts" type="module">
 import ProductList from './components/ProductList.vue';
 import Header from './components/common/Header.vue'
 import Footer from './components/common/Footer.vue'
 import * as listJSON from './quellen/products.json';
+import { defineComponent } from 'vue';
+
+export default{
+  components: {
+    ProductList,
+    Header,
+    Footer
+  }
+}
+
 
 </script>
 

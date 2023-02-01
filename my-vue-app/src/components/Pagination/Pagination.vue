@@ -1,28 +1,47 @@
 <script setup lang="ts">
 import { Product } from "../../index"
 
+const emit = defineEmits(
+	["changePage"]
+)
+
 var props = defineProps<{ 
 	list: Product[] 
 	Pages: Product[][]
 	currentPage: number
 }>()
 
+function changePage(event: any) {
+	let page = parseInt(event.target.innerHTML || "0");
+	emit("changePage", page);
+}
+
+function nextPage() {
+	let page = props.currentPage + 1;
+	emit("changePage", page);
+}
+
+function prevPage() {
+	let page = props.currentPage - 1;
+	emit("changePage", page);
+}
+
 </script>
 
 <template>
     <div class="pagination">
         <ul class="pagination__list">
-            <a class="pagination__list-arrow left" href="_blank">
+            <div class="pagination__list-arrow left" @click="prevPage()">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
-            </a>
+			</div>
             <li v-for="(item, index) in Pages" :key="item.length">
-				<div :class="{ 'active' : currentPage == index}" @click="currentPage = index">
-					{{ index + 1 }}
+				<div :class="{ 'active' : currentPage == index}" @click="changePage">
+					{{ index }}
 				</div>
 			</li>
-            <a class="pagination__list-arrow right" href="_blank">
+            <div class="pagination__list-arrow right" @click="nextPage()">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
-            </a>
+			</div>
         </ul>
     </div>
 </template>

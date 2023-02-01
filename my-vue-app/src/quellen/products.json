@@ -105,6 +105,43 @@
             "price": "8,99€",
             "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
             "availability": "low_stock"
+        },
+        {
+            "code": "015",
+            "title": "PCI Silcofug® E Elastischer Dichtstoff für innen und aussen",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A1063887.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "016",
+            "title": "Portalgun",
+            "oldPrice": "16,99€",
+            "price": "8,99€",
+            "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
+            "availability": "low_stock"
+        },
+        {
+            "code": "017",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "in_stock"
+        },
+        {
+            "code": "018",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "019",
+            "title": "Zementsack",
+            "price": "19,50€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Angebot"
         }
     ]
 }

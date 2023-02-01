@@ -1,12 +1,20 @@
 <script setup lang="ts">
-const test = "test"
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+    data() {
+        return {
+            test: "Testumgebung"
+        }
+    }
+})
 
 </script>
 
 <template>
     <div class="header">
         <span class="title">
-            Vue Testumgebung
+            Vue {{ test }}
         </span>
         <span class="sign">
             by <a target="_blank" href="https://www.xing.com/profile/Fabien_Czimmernings/cv">fcz</a>

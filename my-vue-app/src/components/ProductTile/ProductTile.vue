@@ -32,8 +32,6 @@ defineProps<{ products: Product[] }>()
 .item-wrapper {
     width: 100%;
     padding: 10px;
-
-    
 }
 
 @media (min-width: 560px) {
