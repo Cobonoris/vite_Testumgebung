@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Product } from "../../index"
 
-defineProps<{ 
+var props = defineProps<{ 
 	list: Product[] 
 	Pages: Product[][]
 	currentPage: number
@@ -16,7 +16,9 @@ defineProps<{
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
             </a>
             <li v-for="(item, index) in Pages" :key="item.length">
-				<a>{{ index + 1}}</a>
+				<div :class="{ 'active' : currentPage == index}" @click="currentPage = index">
+					{{ index + 1 }}
+				</div>
 			</li>
             <a class="pagination__list-arrow right" href="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
@@ -73,7 +75,7 @@ defineProps<{
     		text-decoration:none;
 			background-color: #bbb;			
 			
-			a {
+			div {
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -86,7 +88,7 @@ defineProps<{
 				transition: ease-in-out 0.3s;
 			}
 			
-			a:hover {
+			div:hover {
 				background-color: #008c46;
 				transition: ease-in-out 0.3s;
 			}
