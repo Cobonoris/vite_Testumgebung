@@ -11,7 +11,7 @@ var currentPage = 0;
 
 var size = 6;
 var step = 0
-var propArray: Product[][] = []
+var propArray: Product[][] = [];
 var len = props.list.length;
 
 while (step < len) {
