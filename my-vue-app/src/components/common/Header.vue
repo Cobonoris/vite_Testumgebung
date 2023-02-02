@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { defineComponent } from 'vue';
 
-export default defineComponent({
-    data() {
-        return {
-            test: "Testumgebung"
-        }
-    }
-})
 
 </script>
 

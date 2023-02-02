@@ -12,18 +12,23 @@ var props = defineProps<{
 }>()
 
 function changePage(event: any) {
-	let page = parseInt(event.target.innerHTML || "0");
+	let page = parseInt(event.target.innerHTML || "0") - 1;
 	emit("changePage", page);
 }
 
 function nextPage() {
-	let page = props.currentPage + 1;
-	emit("changePage", page);
+	if(props.currentPage < props.Pages.length - 1) {
+		let page = props.currentPage + 1;
+		emit("changePage", page);
+	}
+	
 }
 
 function prevPage() {
-	let page = props.currentPage - 1;
-	emit("changePage", page);
+	if(props.currentPage > 0) {
+		let page = props.currentPage - 1;
+		emit("changePage", page);
+	}
 }
 
 </script>
@@ -36,7 +41,7 @@ function prevPage() {
 			</div>
             <li v-for="(item, index) in Pages" :key="item.length">
 				<div :class="{ 'active' : currentPage == index}" @click="changePage">
-					{{ index }}
+					{{ index + 1}}
 				</div>
 			</li>
             <div class="pagination__list-arrow right" @click="nextPage()">

@@ -5,14 +5,6 @@ import Footer from './components/common/Footer.vue'
 import * as listJSON from './quellen/products.json';
 import { defineComponent } from 'vue';
 
-export default{
-  components: {
-    ProductList,
-    Header,
-    Footer
-  }
-}
-
 
 </script>
 
