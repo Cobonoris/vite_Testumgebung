@@ -11,10 +11,6 @@ const props = defineProps<{
     item: Product 
 }>()
 
-console.log("asdas")
-
-const test = [1,2,3];
-
 </script>
 
 <template>

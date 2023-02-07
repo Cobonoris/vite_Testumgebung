@@ -14,10 +14,12 @@ const wishlist = createStore({
         add(state, item: Product) {
             if (state.articles.indexOf(item) == -1){
                 state.articles.push(item)
+                sessionStorage.setItem('sessionWishlist', JSON.stringify(state.articles))
             }
         },
         delete(state, item: Product) {
             state.articles.splice(state.articles.indexOf(item),1)
+            sessionStorage.setItem('sessionWishlist', JSON.stringify(state.articles))
         }
       }
 })

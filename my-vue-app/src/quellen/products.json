@@ -86,31 +86,31 @@
         },
         {
             "code": "012",
-            "title": "Portalgun",
+            "title": "Milchstraße",
             "oldPrice": "16,99€",
-            "price": "8,99€",
-            "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
+            "price": "7,77€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fwired-de%2Fimage%2Fupload%2Ft_intro%2Funiversum_hero.jpg.jpg&f=1&nofb=1&ipt=4c49cacc5704bc03c69eaba5f445ce705a844d45f9755c90a59fd5acd896659a&ipo=images",
             "availability": "low_stock"
         },
         {
             "code": "013",
-            "title": "Pittiplatsch-Figur",
+            "title": "Hier könnte ihre Werbung stehen",
             "price": "8,99€",
-            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Ffotos-kostenlos%2Fwerbung-fuer-ihr-produkt-selbstbewusster-junger-mann-in-formeller-kleidung-der-die-kamera-anschaut-und-laechelt-waehrend-er-wegzeigt-und-vor-grauem-hintergrund-steht-standing_425904-22183.jpg%3Fsize%3D626%26ext%3Djpg&f=1&nofb=1&ipt=21a72f3285f7f7de059e6b03e146f14d966d7aec3180dcb9b2f9b4b9d4577212&ipo=images",
             "availability": "in_stock"
         },
         {
             "code": "014",
-            "title": "Pittiplatsch-Figur",
+            "title": "Bla Bla Laber",
             "price": "8,99€",
             "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
             "availability": "low_stock"
         },
         {
             "code": "015",
-            "title": "PCI Silcofug® E Elastischer Dichtstoff für innen und aussen",
-            "price": "8,99€",
-            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A1063887.jpg",
+            "title": "schöner LKW",
+            "price": "18878,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fbaumaschinenbilder.de%2Fforum%2Fattachment.php%3Fattachmentid%3D649148%26sid%3D8d04d75554c67969ce02dc450cf95903&f=1&nofb=1&ipt=e5c94386a2ed1add39335bb2ef41162b980fce5af1f860438f5631cf47c3ef14&ipo=images",
             "availability": "low_stock"
         },
         {
@@ -123,9 +123,9 @@
         },
         {
             "code": "017",
-            "title": "Pittiplatsch-Figur",
-            "price": "8,99€",
-            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "title": "Ente",
+            "price": "765,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.jimcdn.com%2Fapp%2Fcms%2Fimage%2Ftransf%2Fdimension%3D1820x1280%3Aformat%3Djpg%2Fpath%2Fs6644047a249ccc71%2Fimage%2Fi0dde8596c2a1fa08%2Fversion%2F1501494901%2Fimage.jpg&f=1&nofb=1&ipt=63e6575922ec8f22fd1a3d799db40136814d48578bb6435c8908d77479ae649a&ipo=images",
             "availability": "in_stock"
         },
         {
@@ -204,9 +204,9 @@
         },
         {
             "code": "028",
-            "title": "Pittiplatsch-Figur",
-            "price": "8,99€",
-            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "title": "Nilgans",
+            "price": "889,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.fotocommunity.com%2Fnilgans-89edb462-010b-47ff-88b0-caa030094836.jpg%3Fheight%3D1080&f=1&nofb=1&ipt=61f71906ee979887a4d6f3afeb02b50ed970fbdab30770f48b4c7e6121f4a431&ipo=images",
             "availability": "low_stock"
         },
         {

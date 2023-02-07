@@ -5,7 +5,7 @@ import { useStore } from 'vuex'
 import { computed } from 'vue'
 
 const wishlist = useStore()
-const articles = computed(() => wishlist.state.articles)
+var articles = computed(() => wishlist.state.articles)
 
 var flyout: HTMLElement;
 
@@ -13,6 +13,14 @@ window.onload = init;
 
 function init() {
      flyout = document.getElementById("flyout")!;
+
+     var wish = sessionStorage.getItem('sessionWishlist');
+     var wishLen = JSON.parse(wish).length;
+    
+    for (var i = 0; i < wishLen; i++){
+        wishlist.commit('add', JSON.parse(wish)[i])
+    }
+     
 }
 
 function displayWishlist() {
@@ -23,8 +31,6 @@ function displayWishlist() {
         flyout.classList.remove("enabled");
         flyout.classList.add("disabled");
     }
-
-    console.log("test");
 }                
 
 </script>
