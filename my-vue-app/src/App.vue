@@ -3,8 +3,6 @@ import ProductList from './components/ProductList.vue';
 import Header from './components/common/Header.vue'
 import Footer from './components/common/Footer.vue'
 import * as listJSON from './quellen/products.json';
-import { defineComponent } from 'vue';
-
 
 </script>
 
@@ -14,7 +12,6 @@ import { defineComponent } from 'vue';
   <div class="list-wrap">
     <ProductList :list="listJSON.products"/>
   </div>
-  
   <Footer/>
 </template>
 

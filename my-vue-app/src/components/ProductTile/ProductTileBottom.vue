@@ -2,7 +2,8 @@
 import {Product} from "../../index"
 import ProductTileButtons from "./ProductTileButtons.vue"
 
-defineProps<{ item: Product }>()
+var props = defineProps<{ item: Product }>()
+
 
 </script>
 
@@ -31,7 +32,7 @@ defineProps<{ item: Product }>()
             nicht verfügbar
             <div class="stockbar outofstock"></div>
         </div>
-        <ProductTileButtons :item="item"/>
+        <ProductTileButtons :item="item" />
     </div> 
 </template>
 
