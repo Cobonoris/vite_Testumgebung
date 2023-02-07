@@ -1,24 +1,32 @@
 <script setup lang="ts">
+import Wishlist from "../Wishlist/Wishlist.vue"
 import { defineComponent } from 'vue';
 
+const test = "Testumgebung"
 
 </script>
 
 <template>
     <div class="header">
-        <span class="title">
-            Vue {{ test }}
-        </span>
-        <span class="sign">
-            by <a target="_blank" href="https://www.xing.com/profile/Fabien_Czimmernings/cv">fcz</a>
-        </span>
+        <div>
+             <span class="title">
+                Vue {{ test }}
+            </span>
+            <span class="sign">
+                by <a target="_blank" href="https://www.xing.com/profile/Fabien_Czimmernings/cv">fcz</a>
+            </span> 
+        </div>
+        <Wishlist />
     </div>
     <div class="mg"></div>
+   
 </template>
 
 <style lang="scss">
 
 .header {
+    justify-content: space-between;
+    display: flex;
     position: fixed;
     top: 0;
     z-index: 5;

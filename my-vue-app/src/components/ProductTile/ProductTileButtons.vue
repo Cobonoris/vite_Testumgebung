@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import {Product} from "../../index"
+import { useStore } from "vuex"
+import { computed } from 'vue'
 
-defineProps<{ item: Product }>()
+
+const wishlist = useStore()
+const articles = computed(() => wishlist.state.articles)
+
+var props = defineProps<{ item: Product }>()
 
 </script>
 
 <template>
     <div class="item-bottom-buttons">
-        <button type="button" class="save">
+        <button type="button" class="save" @click="wishlist.commit('add', item)">
         </button>
         <button type="button" class="buy">
             kaufen

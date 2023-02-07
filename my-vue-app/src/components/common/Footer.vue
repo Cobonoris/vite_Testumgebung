@@ -13,7 +13,6 @@ const test = "test"
 
 .footer {
     width: 100%;
-    position: fixed;
     padding: 10px 10px 0px 10px;
     bottom: 0;
     /* Height of the footer*/
