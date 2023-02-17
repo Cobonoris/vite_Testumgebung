@@ -18,7 +18,7 @@ const test = "Testumgebung"
         </div>
         <Wishlist />
     </div>
-    <div class="mg"></div>
+    <div class="header-mg"></div>
    
 </template>
 
@@ -35,33 +35,36 @@ const test = "Testumgebung"
     padding: 10px;
     background-color: var(--color-green);
     color: var(--color-bg);
-}
 
-.title {
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.sign {
-    font-style: italic;
-
-    a {
-        text-decoration: none;
+    .title {
+        font-weight: bold;
+        font-size: 30px;
     }
 
-    a:visited {
-        color: var(--color-bg);
+    .sign {
+        font-style: italic;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: var(--color-bg);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     }
 
-    a:hover {
-        text-decoration: underline;
+    &-mg {
+        height: 50px;
     }
 }
 
 
-.mg {
-  height: 50px;
-  
-}
+
+
+
 
 </style>

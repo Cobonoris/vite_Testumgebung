@@ -1,0 +1,18 @@
+TODO VUE:
+- Overall:
+	- Styling verbessern -> BEM
+	- logiken mehr in Methoden auslagern
+
+- Wishlist.vue
+	- onload lieber in mount methode von vue
+	- displaywishlist -> toggle von data attribute
+
+- ProductList.vue
+	-while slice -> methode auslagern -> item-wrapper -> methode aufrufen -> für page sizer
+
+- Store:
+	- auslagern in eigene datei/ordner
+	- mutations zusammenführen -> entscheiden über attribut
+
+- TileButtons:
+	- data toggle wie bei wishlist

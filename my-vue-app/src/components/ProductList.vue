@@ -2,6 +2,7 @@
 import { Product } from "../index"
 import ProductTile from './ProductTile/ProductTile.vue'
 import Pagination from './Pagination/Pagination.vue'
+import PageSizer from "./Pagination/PageSizer.vue";
 import { ref } from "vue";
 
 const props = defineProps<{ 
@@ -9,29 +10,37 @@ const props = defineProps<{
 }>()
 
 var currentPage = ref(0);
+var pageSize = ref(10);
 
-var size = 10;
-var step = 0;
-var propArray: Product[][] = [];
-var len = props.list.length;
+function arraySlice(){
+  var propArray: Product[][] = [];
+  var step = 0;
+  var len = props.list.length;
 
-while (step < len) {
-	propArray.push(props.list.slice(step, step += size));
+  while (step < len) {
+    propArray.push(props.list.slice(step, step += pageSize.value));
+  }
+  return propArray
 }
-
-var Pages = propArray;
 
 function updatePage(page: number) {
   currentPage.value = page;
 }
 
-console.log(propArray);
+function updateSize(size: number) {
+  pageSize.value = size;
+}
+
+console.log(arraySlice())
 </script>
 
 <template>
-  <Pagination :list="list" :Pages="Pages" :currentPage="currentPage" @changePage="updatePage"/>
+  <div class="productList-head">
+    <PageSizer :pageSize="pageSize" @changeSize="updateSize"/>
+    <Pagination :list="list" :Pages="arraySlice()" :currentPage="currentPage" @changePage="updatePage"/>
+  </div>
   <div class="productList">
-    <div class="item-wrapper" v-for="item in propArray[currentPage]">
+    <div class="productList-item-wrapper" v-for="item in arraySlice()[currentPage]">
       <ProductTile :product="item"/>
     </div>
   </div>
@@ -45,35 +54,41 @@ console.log(propArray);
     justify-content: center;
     width: 100vw;
     height: 100%;
-}
 
-.item-wrapper {
-    width: 100%;
-    padding: 10px;
+    &-head {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-item-wrapper {
+      width: 100%;
+      padding: 10px;
+    }
 }
 
 @media (min-width: 560px) {
-	.item-wrapper {
+	.productList-item-wrapper {
 		width: 50%;
         float: left;
 	}
 }
 @media (min-width: 768px) {
-	.item-wrapper {
+	.productList-item-wrapper {
 		width: 33%;
         float: left;
 	}
 }
 
 @media (min-width: 1024px) {
-	.item-wrapper {
+	.productList-item-wrapper {
 		width: 25%;
         float: left;
 	}
 }
 
 @media (min-width: 1400px) {
-	.item-wrapper {
+	.productList-item-wrapper {
 		width: 345px;
         float: left;
 	}

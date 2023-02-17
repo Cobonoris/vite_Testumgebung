@@ -5,31 +5,14 @@ import { useStore } from 'vuex'
 import { computed } from 'vue'
 
 const wishlist = useStore()
-var articles = computed(() => wishlist.state.articles)
-
-var flyout: HTMLElement;
-
-window.onload = init; 
-
-function init() {
-     flyout = document.getElementById("flyout")!;
-
-     var wish = sessionStorage.getItem('sessionWishlist');
-     var wishLen = JSON.parse(wish).length;
-    
-    for (var i = 0; i < wishLen; i++){
-        wishlist.commit('add', JSON.parse(wish)[i])
-    }
-     
-}
+var articles = computed(() => wishlist.state.articles!)
 
 function displayWishlist() {
-    if (flyout.classList.contains("disabled")) {
-        flyout.classList.remove("disabled");
-        flyout.classList.add("enabled");
+    const flyout = document.getElementById('wishlist-flyout')
+    if (flyout?.getAttribute('data-toggle') == "") {
+        flyout.setAttribute('data-toggle', "1")
     } else {
-        flyout.classList.remove("enabled");
-        flyout.classList.add("disabled");
+        flyout?.setAttribute('data-toggle', "");
     }
 }                
 
@@ -40,19 +23,17 @@ function displayWishlist() {
         ❤
         <span v-if="articles.length > 0" class="wishlist-nav-number">{{ articles.length }}</span>
     </div>
-    <div id="flyout" class="wishlist-flyout disabled">
+    <div id="wishlist-flyout" class="wishlist-flyout" data-toggle="">
         <h3>Merkliste</h3>
-        <div class="content">
-            <div class="alt" v-if="articles.length == 0">
+        <div class="wishlist-flyout-content">
+            <div class="wishlist-flyout-alt" v-if="articles.length == 0">
                 Keine Produkte auf der Merkliste
             </div>
-            <div class="wishlist-articles">
+            <div class="wishlist-flyout-articles">
                 <WishlistArticle v-for="item in articles" :item="item" />
             </div> 
         </div>
-        
     </div>
-    
 </template>
 
 <style lang="scss">
@@ -85,6 +66,7 @@ function displayWishlist() {
 }
 
 .wishlist-flyout {
+    display: none;
     color: black;
     position: absolute;
     right: 10px;
@@ -102,33 +84,30 @@ function displayWishlist() {
         margin-left: 10px;
         font-size: 20px;
     }
+
+    &[data-toggle="1"] {
+        display: block;
+    }
+
+    &-alt {
+        margin: 20px;
+    }
+
+    &-articles {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px;
+
+    }
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-.wishlist-articles {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px;
-
-}
-
-.disabled {
-    display: none;
-}
-
-.enabled {
-    display: block;
-}
-
-.alt {
-    margin: 20px;
-}
 
 </style>
 

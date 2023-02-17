@@ -7,15 +7,36 @@ import { computed } from 'vue'
 const wishlist = useStore()
 const articles = computed(() => wishlist.state.articles)
 
+var wish = sessionStorage.getItem('sessionWishlist');
+
 var props = defineProps<{ item: Product }>()
+
+const payload = {
+    item: props.item,
+    method: "add"
+}
+
+function toggleInWish(elem: HTMLElement) {
+    for (let i = 0; i < articles.value.length; i++){
+        if (props.item.code == articles.value[i].code) {
+            elem.setAttribute('data-inWish', "1")
+        }
+    }
+}
+
+function wishCommit(event: Event) {
+    wishlist.commit('updateWishlist', payload)
+    var elem = event.target as HTMLElement
+    toggleInWish(elem)
+}
 
 </script>
 
 <template>
     <div class="item-bottom-buttons">
-        <button type="button" class="save" @click="wishlist.commit('add', item)">
+        <button :id="'save-' + props.item.code" type="button" class="item-bottom-buttons-save" @click="wishCommit($event)" data-inWish>
         </button>
-        <button type="button" class="buy">
+        <button type="button" class="item-bottom-buttons-buy">
             kaufen
         </button>
     </div>
@@ -23,13 +44,19 @@ var props = defineProps<{ item: Product }>()
 
 <style lang="scss">
 
+
+
 .item-bottom-buttons {
     position: relative;
     width: 100%;
     height: 40px;
     font-size: 14px;
+    
+    button {
+        padding: 0;
+    }
 
-    .save {
+    &-save {
         cursor: pointer;
         width: 30%;
         height: 40px;
@@ -37,31 +64,35 @@ var props = defineProps<{ item: Product }>()
         border: 0;
         background-color: #f0f0f0;
         transition: 0.2s ease-in-out;
-    }
 
-    .save::after {
-        position: relative;
-        content: "";
-        width: 100%;
-        height: 80%;
-        border-top: 0px;
-        border-right: gray solid 5px;
-        border-left: gray solid 5px;
-        border-bottom: transparent solid 3px;
-        
-    }
-    
-    .save:hover {
-        background-color: var(--color-yellow);
-        transition: 0.2s ease-in-out; 
-        
+        &[data-inWish="1"] {
+            background-color: var(--color-yellow);
+        }
+
         &::after {
-            border-right: var(--color-font) solid 5px;
-            border-left: var(--color-font) solid 5px;
+            position: relative;
+            content: "";
+            width: 100%;
+            height: 80%;
+            border-top: 0px;
+            border-right: gray solid 5px;
+            border-left: gray solid 5px;
+            border-bottom: transparent solid 3px;
+            
+        }
+        
+        &:hover {
+            background-color: var(--color-yellow);
+            transition: 0.2s ease-in-out; 
+            
+            &::after {
+                border-right: var(--color-font) solid 5px;
+                border-left: var(--color-font) solid 5px;
+            }
         }
     }
 
-    .buy {
+    &-buy {
         cursor: pointer;
         position: absolute;
         width: 70%;
@@ -72,13 +103,15 @@ var props = defineProps<{ item: Product }>()
         display: inline;
         font-weight: bold;
         color: white;
+
+        &:hover {
+            background-color: var(--color-yellow);
+            color: var(--color-font);
+            font-weight: bold;
+            transition: 0.2s ease-in-out; 
+        }
     }
-    .buy:hover {
-        background-color: var(--color-yellow);
-        color: var(--color-font);
-        font-weight: bold;
-        transition: 0.2s ease-in-out; 
-    }
+    
 }
 
 </style>

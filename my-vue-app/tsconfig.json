@@ -4,7 +4,7 @@
     "useDefineForClassFields": true,
     "module": "ES2020",
     "moduleResolution": "Node",
-    "strict": false,
+    "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["ES6", "DOM"],
