@@ -11,19 +11,32 @@ const props = defineProps<{
     item: Product 
 }>()
 
+const payload = {
+    item: props.item,
+    method: "delete"
+}
+
+function commitWish() {
+    wishlist.commit('updateWishlist', payload)
+    var saveBtn = document.getElementById("save-" + props.item.code)
+    if (saveBtn?.getAttribute('data-inWish') == "1") {
+        saveBtn.setAttribute('data-inWish', "")
+    }
+}
+
 </script>
 
 <template>
     <div class="wishlist-article">
-        <div class="flex">
-            <div class="wrap">
+        <div class="wishlist-article-flex">
+            <div class="wishlist-article-wrap">
                 <img class="wishlist-article-img" :src="item.imageURL"/>
             </div>
             <span class="wishlist-article-title">{{ item.title }}</span>
         </div>
-        <div class="flex">
+        <div class="wishlist-article-flex">
             <span class="wishlist-article-price">{{ item.price }}</span>
-            <span class="delete" @click="wishlist.commit('delete', item)">+</span>
+            <span class="wishlist-article-delete" @click="commitWish()">+</span>
         </div>
     </div>
 </template>
@@ -66,50 +79,50 @@ const props = defineProps<{
         font-weight: bold;
         margin-right: 10px;
     }
-}
 
-.flex {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-.delete {
-    color: black;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 10px;
-    font-size: 25px;
-    transition: ease-in-out 0.2s;
-    transform: rotate(45deg); 
-
-    &::before {
-        position: absolute;
-        z-index: -1;
-        content: '';
-        width: 10px;
-        height: 10px;
-        padding: 5px;
-        right: -15%;
-        top: 15%;
-        border-radius: 50%;
-        transition: ease-in-out 0.2s;
-        
+    &-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
     }
-    
-    &:hover {
-        color: white;
+
+    &-wrap {
+        width: 90px;
+        text-align: center;
+        vertical-align: center;
+    }
+
+    &-delete {
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+        margin-left: 10px;
+        font-size: 25px;
+        transition: ease-in-out 0.2s;
+        transform: rotate(45deg); 
+
         &::before {
-            background-color: red;
+            position: absolute;
+            z-index: -1;
+            content: '';
+            width: 10px;
+            height: 10px;
+            padding: 5px;
+            right: -15%;
+            top: 15%;
+            border-radius: 50%;
+            transition: ease-in-out 0.2s;
+            
+        }
+        
+        &:hover {
+            color: white;
+            &::before {
+                background-color: red;
+            }
         }
     }
-}
-
-.wrap {
-    width: 90px;
-    text-align: center;
-    vertical-align: center;
 }
 
 @media (max-width: 560px) {
