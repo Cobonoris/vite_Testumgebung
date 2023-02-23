@@ -56,7 +56,7 @@ function prevPage() {
 .pagination {
 	width: auto;
 	max-width: 85%;
-	height: 70px;
+	height: 40px;
 	margin: 20px;
 	display: flex;
 	align-items: center;

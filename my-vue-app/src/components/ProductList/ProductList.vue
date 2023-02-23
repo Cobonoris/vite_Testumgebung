@@ -31,6 +31,7 @@ console.log(arraySlice())
 </script>
 
 <template>
+  <h1>Produktliste</h1>
   <div class="list-wrap">
     <div class="productList-head">
       <PageSizer :pageSize="pageSize" @changeSize="updateSize"/>

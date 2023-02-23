@@ -35,7 +35,7 @@ console.log(props.pageSize)
 <style lang="scss">
 
 .pagesizer {
-    margin: 20px;
+    margin: 10px;
     display: flex;
     width: 280px;
     justify-content: space-between;

@@ -8,16 +8,10 @@ import * as listJSON from './quellen/products.json';
 
 <template>
   <Header/>
-  <h1>Produktliste</h1>
   <router-view/>
   <Footer/>
 </template>
 
 <style scoped>
-
-h1 {
-  margin-left: 10px;
-}
-
 
 </style>

@@ -10,13 +10,13 @@ var articles = computed(() => wishlist.state.articles!)
 </script>
 
 <template>
-    <div class="wishlist-flyout" enabled>
+    <div class="wishlist-page" enabled>
         <h1>Merkliste</h1>
-        <div class="wishlist-flyout-content">
-            <div class="wishlist-flyout-alt" v-if="articles.length == 0">
+        <div class="wishlist-page-content">
+            <div class="wishlist-page-alt" v-if="articles.length == 0">
                 Keine Produkte auf der Merkliste
             </div>
-            <div class="wishlist-flyout-articles">
+            <div class="wishlist-page-articles">
                 <WishlistArticle v-for="item in articles" :item="item" />
             </div> 
         </div>
@@ -27,7 +27,7 @@ var articles = computed(() => wishlist.state.articles!)
 
 
 
-.wishlist-flyout {
+.wishlist-page {
     display: none;
     color: black;
 
