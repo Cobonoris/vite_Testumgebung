@@ -17,6 +17,18 @@
 body {
 	background-color: #dfdfdf;
 	margin: 0;
+
+	a {
+		text-decoration: none
+	}
+
+	a:visited {
+		color: var(--color-bg);
+	}
+
+	a:hover {
+		color: #cddc00
+	}
 }
 
 

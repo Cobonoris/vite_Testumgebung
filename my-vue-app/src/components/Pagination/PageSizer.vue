@@ -6,23 +6,28 @@ const emit = defineEmits(
 )
 
 var sizes: number[]
-sizes = [3, 6, 10]
+sizes = [6, 10, 20]
 
 const props = defineProps<{ 
 	pageSize: number
 }>()
 
+
 function changeSize(event: any) {
 	let size = parseInt(event.target.innerHTML || "0") - 1;
 	emit("changeSize", size);
 }
+console.log(props.pageSize)
 
 </script>
 
 <template>
     <div class="pagesizer">
-        <div v-for="item in sizes" :class="{ 'active' : pageSize == item }" class="pagesizer-sizer" @click="changeSize">
+        <div v-for="item in sizes" :class="{ 'active' : pageSize+1 == item }" class="pagesizer-sizer" @click="changeSize">
             {{ item }}
+        </div>
+        <div class="pagesizer-title">
+            Produkte pro Seite
         </div>
     </div>
 </template>
@@ -32,9 +37,13 @@ function changeSize(event: any) {
 .pagesizer {
     margin: 20px;
     display: flex;
-    width: 160px;
+    width: 280px;
     justify-content: space-between;
     align-items: center;
+
+    &-title {
+        font-weight: bold;
+    }
 
     &-sizer {
         width: 40px;
@@ -55,6 +64,12 @@ function changeSize(event: any) {
 
     .active {
         background-color: #008c46;
+    }
+}
+
+@media (min-width: 560px) {
+	.pagesizer {
+        width: 300px;
     }
 }
 

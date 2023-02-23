@@ -9,7 +9,9 @@ const articles = computed(() => wishlist.state.articles)
 
 var wish = sessionStorage.getItem('sessionWishlist');
 
-var props = defineProps<{ item: Product }>()
+const props = defineProps<{ 
+    item: Product 
+}>()
 
 const payload = {
     item: props.item,

@@ -7,7 +7,7 @@ const emit = defineEmits(
 
 var props = defineProps<{ 
 	list: Product[] 
-	Pages: Product[][]
+	totalPages: number
 	currentPage: number
 }>()
 
@@ -17,7 +17,7 @@ function changePage(event: any) {
 }
 
 function nextPage() {
-	if(props.currentPage < props.Pages.length - 1) {
+	if(props.currentPage < props.totalPages - 1) {
 		let page = props.currentPage + 1;
 		emit("changePage", page);
 	}
@@ -39,7 +39,7 @@ function prevPage() {
             <div class="pagination__list-arrow left" @click="prevPage()">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
 			</div>
-            <li v-for="(item, index) in Pages" :key="item.length">
+            <li v-for="(item, index) in totalPages" :key="index">
 				<div :class="{ 'active' : currentPage == index}" @click="changePage">
 					{{ index + 1}}
 				</div>
@@ -54,7 +54,8 @@ function prevPage() {
 <style lang="scss">
 
 .pagination {
-	width: 320px;
+	width: auto;
+	max-width: 85%;
 	height: 70px;
 	margin: 20px;
 	display: flex;
@@ -137,6 +138,12 @@ function prevPage() {
 			height: 40px;
 			font-weight: bold;
 		}
+	}
+}
+
+@media (min-width: 768px) {
+	.pagination {
+		max-width: 40%;
 	}
 }
 
