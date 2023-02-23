@@ -2,7 +2,8 @@
 import { Product } from "../../index"
 import App from "../../App.vue";
 import { useStore } from 'vuex'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
+import { isTemplateNode } from "@vue/compiler-core";
 
 const wishlist = useStore()
 const articles = computed(() => wishlist.state.articles)
@@ -16,18 +17,19 @@ const payload = {
     method: "delete"
 }
 
-function commitWish() {
-    wishlist.commit('updateWishlist', payload)
+function commitWish(pay: any) {
+    wishlist.commit('updateWishlist', pay)
+    console.log(props.item)
+    console.log(pay.item)
     var saveBtn = document.getElementById("save-" + props.item.code)
-    if (saveBtn?.getAttribute('data-inWish') == "1") {
-        saveBtn.setAttribute('data-inWish', "")
-    }
+    saveBtn?.setAttribute('data-inWish', "")
+    
 }
 
 </script>
 
 <template>
-    <div class="wishlist-article">
+    <div :id="'article-' + payload.item.code" class="wishlist-article">
         <div class="wishlist-article-flex">
             <div class="wishlist-article-wrap">
                 <img class="wishlist-article-img" :src="item.imageURL"/>
@@ -35,8 +37,9 @@ function commitWish() {
             <span class="wishlist-article-title">{{ item.title }}</span>
         </div>
         <div class="wishlist-article-flex">
+            <span class="wishlist-article-availability" :class="'stockinfo ' + item.availability"></span>
             <span class="wishlist-article-price">{{ item.price }}</span>
-            <span class="wishlist-article-delete" @click="commitWish()">+</span>
+            <span class="wishlist-article-delete" @click="commitWish(payload)">+</span>
         </div>
     </div>
 </template>
@@ -50,8 +53,11 @@ function commitWish() {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
     width: 100%;
     height: 80px;
+    max-width: 1400px;
     margin: 10px 0 10px 0;
     padding: 10px;
     transition: ease-in-out 0.2s;
@@ -62,8 +68,31 @@ function commitWish() {
     }
 
     &-title {
-        width: 200px;
         margin-left: 10px;
+    }
+
+    &-availability {
+        margin-right: 10px;
+
+        &.stockinfo {
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.low_stock {
+                background-color: var(--color-yellow); 
+            }
+
+            &.in_stock {
+                background-color: var(--color-green);
+            }
+
+            &.out_of_stock {
+                background-color: red;
+            }
+        }
     }
 
     &-img {
@@ -132,6 +161,17 @@ function commitWish() {
 	    -moz-text-overflow: ellipsis;
 		text-overflow: ellipsis;
 	    white-space: nowrap;
+    }
+
+    .wishlist-article-img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .wishlist-article-wrap {
+        width: 50px;
+        text-align: center;
+        vertical-align: center;
     }
 }
 
