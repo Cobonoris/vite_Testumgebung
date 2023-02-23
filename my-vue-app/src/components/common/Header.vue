@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import Wishlist from "../Wishlist/Wishlist.vue"
-import { computed, defineComponent } from 'vue';
-import { useStore } from "vuex";
+import Nav from '../Nav/Nav.vue'
 
 const test = "Testumgebung"
-
-const wishlist = useStore()
-var articles = computed(() => wishlist.state.articles!)
 
 </script>
 
@@ -20,44 +15,13 @@ var articles = computed(() => wishlist.state.articles!)
                 by <a target="_blank" href="https://www.xing.com/profile/Fabien_Czimmernings/cv">fcz</a>
             </span> 
         </div>
-        <div class="wishlist-nav">
-          <router-link to="/wishlist">❤</router-link>
-          <span v-if="articles.length > 0" class="wishlist-nav-number">{{ articles.length }}</span>  
-        </div>
+        <Nav />
     </div>
     <div class="header-mg"></div>
    
 </template>
 
 <style lang="scss">
-
-.wishlist-nav {
-    cursor: pointer;
-    position: relative;
-    vertical-align: middle;
-    font-size: 32px;
-    transition: 0.2s ease-in-out;
-    right: 10px;
-
-    &:hover {
-        color: var(--color-yellow);
-        transition: 0.2s ease-in-out;
-    }
-
-    &-number {
-        position: absolute;
-        right: -30%;
-        top: 50%;
-        color: white;
-        font-size: 12px;
-        background-color: red;
-        border-radius: 50%;
-        padding: 2px;
-        height:auto;
-        min-width: 20px;
-        text-align: center;
-    }
-}
 
 .header {
     justify-content: space-between;

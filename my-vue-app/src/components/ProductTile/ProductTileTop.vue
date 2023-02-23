@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import { isTemplateNode } from "@vue/compiler-core";
 import {Product} from "../../index"
 
-defineProps<{ item: Product }>()
+const props = defineProps<{ 
+    item: Product 
+}>()
+
 
 </script>
 
 <template>
-    <div class="item-top">
+    <router-link :to="{ name: 'ProductDetail', params: { code: props.item.code } }" class="item-top">
         <div class="item-top-ribbon" v-if="item.ribbon != undefined">
             <span>
                 {{ item.ribbon }}
@@ -19,7 +23,7 @@ defineProps<{ item: Product }>()
         <div class="item-top-title">
             {{ item.title }}
         </div>
-    </div>
+    </router-link>
 </template>
 
 <style lang="scss">

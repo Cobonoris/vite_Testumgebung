@@ -5,8 +5,6 @@ import ProductTileBottom from "./ProductTileBottom.vue"
 
 var props = defineProps<{ product: Product }>()
 
-
-
 </script>
 
 <template>
