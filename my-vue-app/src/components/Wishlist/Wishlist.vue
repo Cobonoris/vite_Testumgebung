@@ -4,8 +4,8 @@ import WishlistArticle from './WishlistArticle.vue';
 import { useStore } from 'vuex'
 import { computed } from 'vue'
 
-const wishlist = useStore()
-var articles = computed(() => wishlist.state.articles!)
+const store = useStore()
+var articles = computed(() => store.state.wishlistStore.articles!)
              
 </script>
 

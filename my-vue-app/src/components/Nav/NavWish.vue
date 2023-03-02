@@ -1,8 +1,8 @@
 <script setup lang="ts">import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { storeKey, useStore } from 'vuex';
 
-const wishlist = useStore()
-var articles = computed(() => wishlist.state.articles!)
+const store = useStore()
+var articles = store.state.wishlistStore.articles
 
 </script>
 

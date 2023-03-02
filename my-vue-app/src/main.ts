@@ -5,6 +5,8 @@ import { useStore } from 'vuex'
 import { Product } from './index'
 import router from './router'
 import store from './store'
+import productlistStore from './Stores/products'
+import wishlistStore from './Stores/wishlist'
 
 
 var wish = sessionStorage.getItem('sessionWishlist') || '[]';

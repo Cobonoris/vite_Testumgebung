@@ -5,8 +5,9 @@ import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
 import { isTemplateNode } from "@vue/compiler-core";
 
-const wishlist = useStore()
-const articles = computed(() => wishlist.state.articles)
+const store = useStore()
+const articles = computed(() => store.state.wishlistStore.articles)
+console.log(articles)
 
 const props = defineProps<{ 
     item: Product 
@@ -18,9 +19,7 @@ const payload = {
 }
 
 function commitWish(pay: any) {
-    wishlist.commit('updateWishlist', pay)
-    console.log(props.item)
-    console.log(pay.item)
+    store.commit('updateWishlist', pay)
     var saveBtn = document.getElementById("save-" + props.item.code)
     saveBtn?.setAttribute('data-inWish', "")
     

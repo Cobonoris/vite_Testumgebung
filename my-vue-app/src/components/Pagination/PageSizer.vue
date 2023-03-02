@@ -17,13 +17,12 @@ function changeSize(event: any) {
 	let size = parseInt(event.target.innerHTML || "0") - 1;
 	emit("changeSize", size);
 }
-console.log(props.pageSize)
 
 </script>
 
 <template>
     <div class="pagesizer">
-        <div v-for="item in sizes" :class="{ 'active' : pageSize+1 == item }" class="pagesizer-sizer" @click="changeSize">
+        <div v-for="item in sizes" :class="{ 'active' : pageSize + 1 == item }" class="pagesizer-sizer" @click="changeSize">
             {{ item }}
         </div>
         <div class="pagesizer-title">

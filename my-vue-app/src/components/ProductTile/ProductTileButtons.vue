@@ -4,8 +4,8 @@ import { useStore } from "vuex"
 import { computed } from 'vue'
 
 
-const wishlist = useStore()
-const articles = computed(() => wishlist.state.articles)
+const store = useStore()
+const articles = computed(() => store.state.wishlistStore.articles)
 
 var wish = sessionStorage.getItem('sessionWishlist');
 
@@ -27,7 +27,7 @@ function toggleInWish(elem: HTMLElement) {
 }
 
 function wishCommit(event: Event) {
-    wishlist.commit('updateWishlist', payload)
+    store.commit('updateWishlist', payload)
     var elem = event.target as HTMLElement
     toggleInWish(elem)
 }

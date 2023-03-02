@@ -6,7 +6,6 @@ const emit = defineEmits(
 )
 
 var props = defineProps<{ 
-	list: Product[] 
 	totalPages: number
 	currentPage: number
 }>()
@@ -31,6 +30,7 @@ function prevPage() {
 	}
 }
 
+
 </script>
 
 <template>
@@ -39,9 +39,9 @@ function prevPage() {
             <div class="pagination__list-arrow left" @click="prevPage()">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
 			</div>
-            <li v-for="(item, index) in totalPages" :key="index">
-				<div :class="{ 'active' : currentPage == index}" @click="changePage">
-					{{ index + 1}}
+            <li v-for="index in totalPages" :key="index - 1">
+				<div :class="{ 'active' : currentPage == index - 1}" @click="changePage">
+					{{ index }}
 				</div>
 			</li>
             <div class="pagination__list-arrow right" @click="nextPage()">

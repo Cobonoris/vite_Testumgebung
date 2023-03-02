@@ -3,18 +3,22 @@ import { Product } from "../../index"
 import ProductTile from '../ProductTile/ProductTile.vue'
 import Pagination from '../Pagination/Pagination.vue'
 import PageSizer from "../Pagination/PageSizer.vue";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import * as listJSON from '../../quellen/products.json';
+import { useStore } from "vuex";
 
 var currentPage = ref(0);
-var pageSize = ref(10);
+var pageSize = ref(9);
+
+const store = useStore()
+const products = store.state.produclistStore.products
 
 function arraySlice(){
-  return listJSON.products.slice(currentPage.value * pageSize.value, (currentPage.value + 1) * pageSize.value + 1);
+  return products.slice(currentPage.value * pageSize.value, (currentPage.value + 1) * pageSize.value + 1);
 }
 
 function getTotalPages() {
-  var totalPages = Math.ceil(listJSON.products.length / pageSize.value)
+  var totalPages = Math.ceil(products.length / pageSize.value)
   return totalPages
 }
 
@@ -27,7 +31,6 @@ function updateSize(size: number) {
   currentPage = ref(0);
 }
 
-console.log(arraySlice())
 </script>
 
 <template>
@@ -35,7 +38,7 @@ console.log(arraySlice())
   <div class="list-wrap">
     <div class="productList-head">
       <PageSizer :pageSize="pageSize" @changeSize="updateSize"/>
-      <Pagination :list="listJSON.products" :totalPages="getTotalPages()" :currentPage="currentPage" @changePage="updatePage"/>
+      <Pagination :list="products" :totalPages="getTotalPages()" :currentPage="currentPage" @changePage="updatePage"/>
     </div>
     <div class="productList">
       <div class="productList-item-wrapper" v-for="item in arraySlice()">
