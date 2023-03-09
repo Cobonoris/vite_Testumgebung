@@ -1,8 +1,4 @@
-TODO VUE:
-- ROUTER: 
-	- Vue Router extension
-	- home bleibt productList
-	-> /wishlist 
-	- ADS
-
-- Merkliste beim löschen falsche indexe ??
+TODO:
+- Pagination -> auspunkten
+- Vite Test... basic test für rendering
+- stories und tests in die ordner der komponenten
