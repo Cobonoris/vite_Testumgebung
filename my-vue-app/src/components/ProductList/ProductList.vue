@@ -7,14 +7,14 @@ import { computed, ref } from "vue";
 import * as listJSON from '../../quellen/products.json';
 import { useStore } from "vuex";
 
-var currentPage = ref(0);
+var currentPage = ref(1);
 var pageSize = ref(9);
 
 const store = useStore()
 const products = store.state.produclistStore.products
 
 function arraySlice(){
-  return products.slice(currentPage.value * pageSize.value, (currentPage.value + 1) * pageSize.value + 1);
+  return products.slice((currentPage.value - 1) * (pageSize.value + 1), currentPage.value * (pageSize.value + 1));
 }
 
 function getTotalPages() {
@@ -28,7 +28,7 @@ function updatePage(page: number) {
 
 function updateSize(size: number) {
   pageSize.value = size;
-  currentPage = ref(0);
+  currentPage = ref(1);
 }
 
 </script>
@@ -38,7 +38,7 @@ function updateSize(size: number) {
   <div class="list-wrap">
     <div class="productList-head">
       <PageSizer :pageSize="pageSize" @changeSize="updateSize"/>
-      <Pagination :list="products" :totalPages="getTotalPages()" :currentPage="currentPage" @changePage="updatePage"/>
+      <Pagination :totalPages="getTotalPages()" :currentPage="currentPage" @changePage="updatePage"/>
     </div>
     <div class="productList">
       <div class="productList-item-wrapper" v-for="item in arraySlice()">
@@ -62,7 +62,7 @@ function updateSize(size: number) {
 .productList {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
     max-width: 1400px;
     margin: auto;

@@ -216,6 +216,253 @@
             "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
             "availability": "in_stock",
             "ribbon": "Angebot"
+        },
+        {
+            "code": "030",
+            "title": "Zementsack",
+            "price": "19,50€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Angebot"
+        },
+        {
+            "code": "031",
+            "title": "Warnweste",
+            "price": "8,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.obi.at%2Fproduct%2FDE%2F1500x1500%2F439517_1.jpg&f=1&nofb=1&ipt=ea51a19e3ec359a954e91b8560ddf14e15ac57e3beae802555ea0303b1231f0b&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Versandkostenfrei"
+        },
+        {
+            "code": "032",
+            "title": "Griffstange aus Eisenadnhfahsdofj+ aojdfpjasdfj ",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A2542940.jpg",
+            "availability": "out_of_stock",
+            "variants": 3
+        },
+        {
+            "code": "033",
+            "title": "PCI Silcofug® E Elastischer Dichtstoff für innen und aussen",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A1063887.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "034",
+            "title": "Portalgun",
+            "oldPrice": "16,99€",
+            "price": "8,99€",
+            "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
+            "availability": "low_stock"
+        },
+        {
+            "code": "035",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "in_stock"
+        },
+        {
+            "code": "036",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "037",
+            "title": "Zementsack",
+            "price": "19,50€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Angebot"
+        },
+        {
+            "code": "038",
+            "title": "Warnweste",
+            "price": "8,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.obi.at%2Fproduct%2FDE%2F1500x1500%2F439517_1.jpg&f=1&nofb=1&ipt=ea51a19e3ec359a954e91b8560ddf14e15ac57e3beae802555ea0303b1231f0b&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Versandkostenfrei"
+        },
+        {
+            "code": "039",
+            "title": "Griffstange aus Eisen",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A2542940.jpg",
+            "availability": "out_of_stock",
+            "variants": 3
+        },
+        {
+            "code": "040",
+            "title": "PCI Silcofug® E Elastischer Dichtstoff für innen und aussen",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A1063887.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "041",
+            "title": "Milchstraße",
+            "oldPrice": "16,99€",
+            "price": "7,77€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fwired-de%2Fimage%2Fupload%2Ft_intro%2Funiversum_hero.jpg.jpg&f=1&nofb=1&ipt=4c49cacc5704bc03c69eaba5f445ce705a844d45f9755c90a59fd5acd896659a&ipo=images",
+            "availability": "low_stock"
+        },
+        {
+            "code": "042",
+            "title": "Hier könnte ihre Werbung stehen",
+            "price": "8,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Ffotos-kostenlos%2Fwerbung-fuer-ihr-produkt-selbstbewusster-junger-mann-in-formeller-kleidung-der-die-kamera-anschaut-und-laechelt-waehrend-er-wegzeigt-und-vor-grauem-hintergrund-steht-standing_425904-22183.jpg%3Fsize%3D626%26ext%3Djpg&f=1&nofb=1&ipt=21a72f3285f7f7de059e6b03e146f14d966d7aec3180dcb9b2f9b4b9d4577212&ipo=images",
+            "availability": "in_stock"
+        },
+        {
+            "code": "043",
+            "title": "Bla Bla Laber",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "044",
+            "title": "schöner LKW",
+            "price": "18878,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fbaumaschinenbilder.de%2Fforum%2Fattachment.php%3Fattachmentid%3D649148%26sid%3D8d04d75554c67969ce02dc450cf95903&f=1&nofb=1&ipt=e5c94386a2ed1add39335bb2ef41162b980fce5af1f860438f5631cf47c3ef14&ipo=images",
+            "availability": "low_stock"
+        },
+        {
+            "code": "045",
+            "title": "Portalgun",
+            "oldPrice": "16,99€",
+            "price": "8,99€",
+            "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
+            "availability": "low_stock"
+        },
+        {
+            "code": "046",
+            "title": "Ente",
+            "price": "765,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.jimcdn.com%2Fapp%2Fcms%2Fimage%2Ftransf%2Fdimension%3D1820x1280%3Aformat%3Djpg%2Fpath%2Fs6644047a249ccc71%2Fimage%2Fi0dde8596c2a1fa08%2Fversion%2F1501494901%2Fimage.jpg&f=1&nofb=1&ipt=63e6575922ec8f22fd1a3d799db40136814d48578bb6435c8908d77479ae649a&ipo=images",
+            "availability": "in_stock"
+        },
+        {
+            "code": "047",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "048",
+            "title": "Zementsack",
+            "price": "19,50€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Angebot"
+        },
+        {
+            "code": "049",
+            "title": "Griffstange aus Eisen",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A2542940.jpg",
+            "availability": "out_of_stock",
+            "variants": 3
+        },
+        {
+            "code": "050",
+            "title": "PCI Silcofug® E Elastischer Dichtstoff für innen und aussen",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A1063887.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "051",
+            "title": "Portalgun",
+            "oldPrice": "16,99€",
+            "price": "8,99€",
+            "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
+            "availability": "low_stock"
+        },
+        {
+            "code": "052",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "in_stock"
+        },
+        {
+            "code": "053",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "054",
+            "title": "PCI Silcofug® E Elastischer Dichtstoff für innen und aussen",
+            "price": "8,99€",
+            "imageURL": "https://res.cloudinary.com/baywa-ag-p/image/upload/A1063887.jpg",
+            "availability": "low_stock"
+        },
+        {
+            "code": "055",
+            "title": "Portalgun",
+            "oldPrice": "16,99€",
+            "price": "8,99€",
+            "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
+            "availability": "low_stock"
+        },
+        {
+            "code": "056",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "in_stock"
+        },
+        {
+            "code": "057",
+            "title": "Nilgans",
+            "price": "889,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.fotocommunity.com%2Fnilgans-89edb462-010b-47ff-88b0-caa030094836.jpg%3Fheight%3D1080&f=1&nofb=1&ipt=61f71906ee979887a4d6f3afeb02b50ed970fbdab30770f48b4c7e6121f4a431&ipo=images",
+            "availability": "low_stock"
+        },
+        {
+            "code": "058",
+            "title": "Zementsack",
+            "price": "19,50€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Angebot"
+        },
+        {
+            "code": "059",
+            "title": "Portalgun",
+            "oldPrice": "16,99€",
+            "price": "8,99€",
+            "imageURL": "http://dl36mmdz94630.cloudfront.net/uploads/assets/images/000/007/158/large/Portal_Gun.137.jpg?1388772938",
+            "availability": "low_stock"
+        },
+        {
+            "code": "060",
+            "title": "Pittiplatsch-Figur",
+            "price": "8,99€",
+            "imageURL": "https://mytoys.scene7.com/is/image/myToys/ext/23731145-01.jpg",
+            "availability": "in_stock"
+        },
+        {
+            "code": "061",
+            "title": "Nilgans",
+            "price": "889,99€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.fotocommunity.com%2Fnilgans-89edb462-010b-47ff-88b0-caa030094836.jpg%3Fheight%3D1080&f=1&nofb=1&ipt=61f71906ee979887a4d6f3afeb02b50ed970fbdab30770f48b4c7e6121f4a431&ipo=images",
+            "availability": "low_stock"
+        },
+        {
+            "code": "062",
+            "title": "Zementsack",
+            "price": "19,50€",
+            "imageURL": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fzementsack-50051459.jpg&f=1&nofb=1&ipt=7fb7eb8603f566480252baf162467eb26b98bcb4599791b462e5a61644b49509&ipo=images",
+            "availability": "in_stock",
+            "ribbon": "Angebot"
         }
     ]
 }

@@ -6,7 +6,7 @@ const emit = defineEmits(
 )
 
 var sizes: number[]
-sizes = [6, 10, 20]
+sizes = [10, 20, 30]
 
 const props = defineProps<{ 
 	pageSize: number

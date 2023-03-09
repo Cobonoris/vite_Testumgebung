@@ -1,7 +1,7 @@
-import MyHeader from './Header.vue';
+import MyHeader from './HeaderEx.vue';
 
 export default {
-  title: 'Example/Header',
+  title: 'Example/HeaderEx',
   component: MyHeader,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/vue/configure/story-layout

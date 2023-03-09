@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { Product } from "../../index"
 
 const emit = defineEmits(
@@ -11,12 +12,14 @@ var props = defineProps<{
 }>()
 
 function changePage(event: any) {
-	let page = parseInt(event.target.innerHTML || "0") - 1;
-	emit("changePage", page);
+	if (event.target.innerHTML != "x"){
+		let page = parseInt(event.target.innerHTML || "0");
+		emit("changePage", page);
+	}
 }
 
 function nextPage() {
-	if(props.currentPage < props.totalPages - 1) {
+	if(props.currentPage < props.totalPages) {
 		let page = props.currentPage + 1;
 		emit("changePage", page);
 	}
@@ -24,12 +27,29 @@ function nextPage() {
 }
 
 function prevPage() {
-	if(props.currentPage > 0) {
+	if(props.currentPage > 1) {
 		let page = props.currentPage - 1;
 		emit("changePage", page);
 	}
 }
 
+function returnMinimizedPagination() {
+	let minimized = [];
+    const limit = 3;
+	var prev = "";
+
+    for (let i = 1; i <= props.totalPages; i++) {
+        if (i == 1 || i == props.totalPages || i == props.currentPage || i == (props.currentPage + 1) || i== (props.currentPage - 1)) {
+			minimized.push(i);
+			var prev = "";
+		} else if (prev != 'x') {
+			minimized.push("x")
+			prev= "x"
+		}
+    }
+    
+    return minimized;
+}
 
 </script>
 
@@ -39,10 +59,11 @@ function prevPage() {
             <div class="pagination__list-arrow left" @click="prevPage()">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
 			</div>
-            <li v-for="index in totalPages" :key="index - 1">
-				<div :class="{ 'active' : currentPage == index - 1}" @click="changePage">
+            <li v-for="index in returnMinimizedPagination()">
+				<div v-if="index != 'x'" :class="{ 'active' : props.currentPage == index }" class="pg" @click="changePage">
 					{{ index }}
 				</div>
+				<div v-else class="pg inactive">...</div>
 			</li>
             <div class="pagination__list-arrow right" @click="nextPage()">
                 <img src="https://cdn-icons-png.flaticon.com/512/32/32213.png">
@@ -97,8 +118,7 @@ function prevPage() {
 		li {
 			
 			color: black;
-    		text-decoration:none;
-			background-color: #bbb;			
+    		text-decoration:none;			
 			
 			div {
 				display: flex;
@@ -119,24 +139,34 @@ function prevPage() {
 			}
 			
 		}
-		
-		.inactive {
-			display: block;
-			background-color: #ddd;
-			font-weight: bold;
-			top: 10px;
-			position: relative;
-		}
-		
-		.active {
-			background-color: #008c46;
-			color: white;
+
+		.pg {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 40px;
 			height: 40px;
 			font-weight: bold;
+			background-color: #bbb;
+		}
+		
+		.inactive {
+			color: black;
+			background-color: unset;
+			font-weight: bold;
+			top: 10px;
+			position: relative;
+			width: 10px;
+
+			&:hover {
+				background-color: unset;
+			}
+
+		}
+		
+		.active {
+			background-color: #008c46;
+			color: white;
 		}
 	}
 }

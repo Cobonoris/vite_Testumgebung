@@ -8,7 +8,7 @@ var articles = store.state.wishlistStore.articles
 
 <template>
     <div class="header-nav-wishlist">
-        <router-link to="/wishlist" class="heart">❤</router-link>
+        <!--<router-link to="/wishlist" class="heart">❤</router-link>-->
         <span v-if="articles.length > 0" class="header-nav-wishlist-number">{{ articles.length }}</span> 
     </div>
     
